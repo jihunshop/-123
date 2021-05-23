@@ -1,1 +1,1 @@
-token = "ODQ1OTYxNzMwNDc5MzU3OTcz.YKolQQ.SDgQX3iSo3raCKm7aNnm5KqZsPU"
+access_token = os.environ["BOT_TOKEN"]
