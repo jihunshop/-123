@@ -16,8 +16,6 @@ client = discord.Client()
 
 eb = discord.Embed
 
-token = setting.token
-
 def is_expired(time):
     ServerTime = datetime.datetime.now()
     ExpireTime = datetime.datetime.strptime(time, '%Y-%m-%d %H:%M')
@@ -494,7 +492,8 @@ async def on_message(message):
                         await message.channel.send(embed=embed("success", "DM을 확인해주세요.", ""))
                     except:
                         await message.channel.send(embed=embed("error", "오류 발생", "도움말을 보낼 수 없습니다."))
-
-client.run(token)
+                        
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
 
